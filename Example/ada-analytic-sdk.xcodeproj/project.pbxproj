@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		137D746F16DE406D925B319D /* Pods_ada_analytic_sdk_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ada_analytic_sdk_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E3726E7095CA1F64097CD8D /* Pods-ada-analytic-sdk_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ada-analytic-sdk_Tests.release.xcconfig"; path = "Target Support Files/Pods-ada-analytic-sdk_Tests/Pods-ada-analytic-sdk_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		2DC4BDF6F32B4865C0D2F3E4 /* ada-analytic-sdk.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "ada-analytic-sdk.podspec"; path = "../ada-analytic-sdk.podspec"; sourceTree = "<group>"; };
+		2DC4BDF6F32B4865C0D2F3E4 /* ada-analytic-sdk.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "ada-analytic-sdk.podspec"; path = "../ada-analytic-sdk.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6003F58A195388D20070C39A /* ada-analytic-sdk_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ada-analytic-sdk_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,8 +63,8 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9052D7D7785A40523A6FB5CB /* Pods-ada-analytic-sdk_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ada-analytic-sdk_Example.release.xcconfig"; path = "Target Support Files/Pods-ada-analytic-sdk_Example/Pods-ada-analytic-sdk_Example.release.xcconfig"; sourceTree = "<group>"; };
 		99537D136D075BA8303D996B /* Pods-ada-analytic-sdk_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ada-analytic-sdk_Example.debug.xcconfig"; path = "Target Support Files/Pods-ada-analytic-sdk_Example/Pods-ada-analytic-sdk_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		9B01D651A29F8882B599CB3B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		C9C7D8F197D4A48BAD2C9597 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9B01D651A29F8882B599CB3B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C9C7D8F197D4A48BAD2C9597 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E22DFFA5D86E022CC0ECB262 /* Pods-ada-analytic-sdk_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ada-analytic-sdk_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ada-analytic-sdk_Tests/Pods-ada-analytic-sdk_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE46F52ADB6AB790E1001718 /* Pods_ada_analytic_sdk_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ada_analytic_sdk_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,7 +103,6 @@
 				E22DFFA5D86E022CC0ECB262 /* Pods-ada-analytic-sdk_Tests.debug.xcconfig */,
 				1E3726E7095CA1F64097CD8D /* Pods-ada-analytic-sdk_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "chavalit.v@ada-asia.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = SR52JE4SY6;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -346,10 +349,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ada-analytic-sdk_Example/Pods-ada-analytic-sdk_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/ada-analytic-sdk/ada_analytic_sdk.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ada_analytic_sdk.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +501,7 @@
 			baseConfigurationReference = 99537D136D075BA8303D996B /* Pods-ada-analytic-sdk_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SR52JE4SY6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ada-analytic-sdk/ada-analytic-sdk-Prefix.pch";
 				INFOPLIST_FILE = "ada-analytic-sdk/ada-analytic-sdk-Info.plist";
@@ -510,6 +518,7 @@
 			baseConfigurationReference = 9052D7D7785A40523A6FB5CB /* Pods-ada-analytic-sdk_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SR52JE4SY6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ada-analytic-sdk/ada-analytic-sdk-Prefix.pch";
 				INFOPLIST_FILE = "ada-analytic-sdk/ada-analytic-sdk-Info.plist";

@@ -7,7 +7,8 @@
 //
 
 @import UIKit;
+#import <ADAAnalytics.h>
 
-@interface ADAViewController : UIViewController
+@interface ADAViewController : UIViewController<ADAAnalyticsDelegate>
 
 @end

@@ -1,0 +1,6 @@
+framework module Pods_ada_analytic_sdk_Tests {
+  umbrella header "Pods-ada-analytic-sdk_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

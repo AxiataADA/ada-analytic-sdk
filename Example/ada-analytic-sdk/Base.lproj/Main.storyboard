@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +18,56 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zI-c7-pSA">
+                                <rect key="frame" x="150" y="318.5" width="75" height="30"/>
+                                <state key="normal" title="Button Tap"/>
+                                <connections>
+                                    <action selector="buttonTapEvent:" destination="whP-gf-Uak" eventType="touchUpInside" id="kve-BA-Xm0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNv-ek-oPM">
+                                <rect key="frame" x="168.5" y="369" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginEvent:" destination="whP-gf-Uak" eventType="touchUpInside" id="0Km-ro-43x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aes-li-iD5">
+                                <rect key="frame" x="155.5" y="420" width="64" height="30"/>
+                                <state key="normal" title="Purchase"/>
+                                <connections>
+                                    <action selector="purchaseEvent:" destination="whP-gf-Uak" eventType="touchUpInside" id="dQN-bx-HeO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuH-A0-FTd">
+                                <rect key="frame" x="150" y="467" width="75" height="30"/>
+                                <state key="normal" title="Add Friend"/>
+                                <connections>
+                                    <action selector="addFriendEvent:" destination="whP-gf-Uak" eventType="touchUpInside" id="G9g-dA-hfb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3je-b6-OHk">
+                                <rect key="frame" x="118.5" y="211" width="138" height="30"/>
+                                <state key="normal" title="Request for location"/>
+                                <connections>
+                                    <action selector="requestForLocation:" destination="whP-gf-Uak" eventType="touchUpInside" id="3oL-6i-fb2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aes-li-iD5" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="1GJ-nK-Lpc"/>
+                            <constraint firstItem="VuH-A0-FTd" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="Rfl-37-nhz"/>
+                            <constraint firstItem="VuH-A0-FTd" firstAttribute="top" secondItem="aes-li-iD5" secondAttribute="bottom" constant="17" id="VJH-GZ-89m"/>
+                            <constraint firstItem="7zI-c7-pSA" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="djb-R0-ZsR"/>
+                            <constraint firstItem="tNv-ek-oPM" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="gyc-KI-tGE"/>
+                            <constraint firstItem="7zI-c7-pSA" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="pF5-r4-OS0"/>
+                            <constraint firstItem="tNv-ek-oPM" firstAttribute="top" secondItem="7zI-c7-pSA" secondAttribute="bottom" constant="20.5" id="qbj-yb-GRr"/>
+                            <constraint firstItem="7zI-c7-pSA" firstAttribute="top" secondItem="3je-b6-OHk" secondAttribute="bottom" constant="77.5" id="uI1-lO-AVF"/>
+                            <constraint firstItem="3je-b6-OHk" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="vU4-5o-Be8"/>
+                            <constraint firstItem="aes-li-iD5" firstAttribute="top" secondItem="tNv-ek-oPM" secondAttribute="bottom" constant="21" id="yv8-WY-Im2"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
