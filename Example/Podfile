@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'ada-analytic-sdk_Example' do
+  pod 'ada-analytic-sdk', :path => '../'
+
+  target 'ada-analytic-sdk_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
