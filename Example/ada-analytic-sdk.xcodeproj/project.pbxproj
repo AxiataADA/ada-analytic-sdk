@@ -248,7 +248,7 @@
 				ORGANIZATIONNAME = "chavalit.v@ada-asia.com";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = SR52JE4SY6;
+						DevelopmentTeam = M5BVU734LU;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -501,7 +501,7 @@
 			baseConfigurationReference = 99537D136D075BA8303D996B /* Pods-ada-analytic-sdk_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SR52JE4SY6;
+				DEVELOPMENT_TEAM = M5BVU734LU;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ada-analytic-sdk/ada-analytic-sdk-Prefix.pch";
 				INFOPLIST_FILE = "ada-analytic-sdk/ada-analytic-sdk-Info.plist";
@@ -518,7 +518,7 @@
 			baseConfigurationReference = 9052D7D7785A40523A6FB5CB /* Pods-ada-analytic-sdk_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SR52JE4SY6;
+				DEVELOPMENT_TEAM = M5BVU734LU;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ada-analytic-sdk/ada-analytic-sdk-Prefix.pch";
 				INFOPLIST_FILE = "ada-analytic-sdk/ada-analytic-sdk-Info.plist";

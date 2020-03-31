@@ -368,7 +368,6 @@ NSTimer *timer;
     [parameters setObject:timestamp forKey:@"timestamp"];
     [parameters setObject:iOSVersion forKey:@"os_version"];
     [parameters setObject:phoneModel forKey:@"device_model"];
-    [parameters setObject:carrier forKey:@"carrier"];
     [parameters setObject:currentSessionID forKey:@"session_id"];
     [parameters setObject:eventName forKey:@"event_id"];
     [parameters setObject:[self internetConnectionType] forKey:@"connection_type"];
@@ -376,6 +375,10 @@ NSTimer *timer;
     [parameters setObject:@"Apple" forKey:@"manufacturer"];
     [parameters setObject:[self getCountryCode] forKey:@"country_code"];
     [parameters setObject:[self getIPAddress: YES] forKey:@"ip_address"];
+    
+    if (carrier) {
+        [parameters setObject:carrier forKey:@"carrier"];
+    }
     
     if (lastLocation) {
         NSString *latitude = [NSString stringWithFormat:@"%f", lastLocation.coordinate.latitude];
