@@ -12,8 +12,8 @@
 
 #import "ADAAnalytics.h"
 #import "URLRequestSigner.h"
-#import "AFNetworking/AFNetworking.h"
-#import "Reachability/Reachability.h"
+#import "AFNetworking.h"
+#import "Reachability.h"
 #import "StringHash.h"
 #import <sys/utsname.h>
 #include <ifaddrs.h>
@@ -357,38 +357,35 @@ NSTimer *timer;
 - (NSMutableDictionary *)getDefaultEventParameterForEvent:(NSString *)eventName
 {
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
-    [parameters setObject:appName forKey:@"app_name"];
-    [parameters setObject:[[NSBundle mainBundle] bundleIdentifier] forKey:@"app_id"];
-    [parameters setObject:maid forKey:@"maid"];
+    [parameters setValue:appName forKey:@"app_name"];
+    [parameters setValue:[[NSBundle mainBundle] bundleIdentifier] forKey:@"app_id"];
+    [parameters setValue:maid forKey:@"maid"];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
     NSString *installedDateString = [formatter stringFromDate:installedDate];
     NSString *timestamp = [formatter stringFromDate:[NSDate date]];
-    [parameters setObject:installedDateString forKey:@"installed_date"];
-    [parameters setObject:timestamp forKey:@"timestamp"];
-    [parameters setObject:iOSVersion forKey:@"os_version"];
-    [parameters setObject:phoneModel forKey:@"device_model"];
-    [parameters setObject:currentSessionID forKey:@"session_id"];
-    [parameters setObject:eventName forKey:@"event_id"];
-    [parameters setObject:[self internetConnectionType] forKey:@"connection_type"];
-    [parameters setObject:@"iOS" forKey:@"platform"];
-    [parameters setObject:@"Apple" forKey:@"manufacturer"];
-    [parameters setObject:[self getCountryCode] forKey:@"country_code"];
-    [parameters setObject:[self getIPAddress: YES] forKey:@"ip_address"];
-    
-    if (carrier) {
-        [parameters setObject:carrier forKey:@"carrier"];
-    }
+    [parameters setValue:installedDateString forKey:@"installed_date"];
+    [parameters setValue:timestamp forKey:@"timestamp"];
+    [parameters setValue:iOSVersion forKey:@"os_version"];
+    [parameters setValue:phoneModel forKey:@"device_model"];
+    [parameters setValue:currentSessionID forKey:@"session_id"];
+    [parameters setValue:carrier forKey:@"carrier"];
+    [parameters setValue:eventName forKey:@"event_id"];
+    [parameters setValue:[self internetConnectionType] forKey:@"connection_type"];
+    [parameters setValue:@"iOS" forKey:@"platform"];
+    [parameters setValue:@"Apple" forKey:@"manufacturer"];
+    [parameters setValue:[self getCountryCode] forKey:@"country_code"];
+    [parameters setValue:[self getIPAddress: YES] forKey:@"ip_address"];
     
     if (lastLocation) {
         NSString *latitude = [NSString stringWithFormat:@"%f", lastLocation.coordinate.latitude];
         NSString *longitude = [NSString stringWithFormat:@"%f", lastLocation.coordinate.longitude];
         NSDictionary *locationDict = @{@"lat": latitude, @"lon": longitude};
-        [parameters setObject:locationDict forKey:@"location"];
+        [parameters setValue:locationDict forKey:@"location"];
     }
     
     if ([recentPeripherals count] > 0) {
-        [parameters setObject:recentPeripherals forKey:@"bluetooth_devices"];
+        [parameters setValue:recentPeripherals forKey:@"bluetooth_devices"];
     }
     
     return parameters;

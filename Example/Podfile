@@ -1,6 +1,6 @@
 use_frameworks!
 
-platform :ios, '8.0'
+platform :ios, '10.0'
 
 target 'ada-analytic-sdk_Example' do
   pod 'ada-analytic-sdk', :path => '../'
