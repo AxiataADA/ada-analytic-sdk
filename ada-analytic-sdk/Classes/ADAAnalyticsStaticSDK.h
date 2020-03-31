@@ -15,8 +15,8 @@ FOUNDATION_EXPORT double ADAAnalyticsStaticSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char ADAAnalyticsStaticSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ADAAnalyticsStaticSDK/PublicHeader.h>
-#import <ADAAnalyticsStaticSDK/ADAAnalytics.h>
-#import <ADAAnalyticsStaticSDK/AWSCategory.h>
-#import <ADAAnalyticsStaticSDK/URLRequestSigner.h>
-#import <ADAAnalyticsStaticSDK/StringHash.h>
+#import <ADAAnalytics.h>
+#import <AWSCategory.h>
+#import <URLRequestSigner.h>
+#import <StringHash.h>
 
