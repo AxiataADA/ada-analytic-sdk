@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ada-analytic-sdk'
-  s.version          = '1.0.5'
+  s.version          = '1.0.6'
   s.summary          = 'ada-analytic-sdk.'
 
 # This description is used to generate tags and improve search results.
@@ -18,14 +18,14 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-    ada-analytic-sdk.
+    ADA Mobile Analytic SDK for iOS
                        DESC
 
-  s.homepage         = 'https://github.com/chavalit.v@ada-asia.com/ada-analytic-sdk'
+  s.homepage         = 'https://github.com/AxiataADA/ada-analytic-sdk-specs.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'chavalit.v@ada-asia.com' => 'chavalit.v@ada-asia.com' }
-  s.source           = { :git => 'https://github.com/chavalit.v@ada-asia.com/ada-analytic-sdk.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/AxiataADA/ada-analytic-sdk.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
