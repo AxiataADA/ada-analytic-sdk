@@ -13,6 +13,9 @@
 @interface ADAViewController () 
 
 @property(nonatomic, strong) CLLocationManager *locationManager;
+
+- (void)askForUserLocationPermission;
+- (void)promptUserToGoToSettings;
     
 @end
 
@@ -22,11 +25,51 @@
 {
     [super viewDidLoad];
     [ADAAnalytics sharedInstance].delegate = self;
+    self.locationManager = [[CLLocationManager alloc] init];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self askForUserLocationPermission];
+}
+
+- (void)askForUserLocationPermission
+{
+    switch (CLLocationManager.authorizationStatus) {
+        case kCLAuthorizationStatusNotDetermined:
+            [self.locationManager requestWhenInUseAuthorization];
+            break;
+            
+        case kCLAuthorizationStatusDenied:
+        case kCLAuthorizationStatusRestricted:
+            [self promptUserToGoToSettings];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)promptUserToGoToSettings
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"We need to access your location" message:@"Please grant your location permission in the app Settings." preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *settings = [UIAlertAction actionWithTitle:@"Settings" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: UIApplicationOpenSettingsURLString]
+                                           options:@{}
+                                 completionHandler:nil];
+    }];
+
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alert addAction:settings];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:true completion:nil];
 }
 
 - (IBAction)onWelcomeTap:(id)sender
 {
-    [self.locationManager requestWhenInUseAuthorization];
+    [self askForUserLocationPermission];
 }
 
 - (IBAction)registerTapEvent:(id)sender

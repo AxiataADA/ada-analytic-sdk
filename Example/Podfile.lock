@@ -1,5 +1,5 @@
 PODS:
-  - ada-analytic-sdk (1.0.3):
+  - ada-analytic-sdk (1.0.4):
     - AFNetworking (~> 3.2.1)
     - Reachability
   - AFNetworking (3.2.1):
@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ada-analytic-sdk: 16efd2c898a22b72a38ba9468b358280a4f74a82
+  ada-analytic-sdk: 3d0f1ad6871547d370a9945a91e37e3f216b27b7
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
