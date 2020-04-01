@@ -1,0 +1,41 @@
+PODS:
+  - ada-analytic-sdk (1.0.4):
+    - AFNetworking (~> 3.2.1)
+    - Reachability
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Reachability (3.2)
+
+DEPENDENCIES:
+  - ada-analytic-sdk (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - Reachability
+
+EXTERNAL SOURCES:
+  ada-analytic-sdk:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ada-analytic-sdk: 3d0f1ad6871547d370a9945a91e37e3f216b27b7
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+
+PODFILE CHECKSUM: 6fe9373ceef80e6747dacad900eae09c6f99b292
+
+COCOAPODS: 1.8.4
