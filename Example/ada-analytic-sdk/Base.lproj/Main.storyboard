@@ -19,11 +19,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zI-c7-pSA">
-                                <rect key="frame" x="150" y="318.5" width="75" height="30"/>
-                                <state key="normal" title="Button Tap"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3je-b6-OHk">
+                                <rect key="frame" x="134" y="211" width="107" height="30"/>
+                                <state key="normal" title="Welcom to ADA"/>
                                 <connections>
-                                    <action selector="buttonTapEvent:" destination="whP-gf-Uak" eventType="touchUpInside" id="kve-BA-Xm0"/>
+                                    <action selector="onWelcomeTap:" destination="whP-gf-Uak" eventType="touchUpInside" id="hsq-RF-ldh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zI-c7-pSA">
+                                <rect key="frame" x="159" y="318.5" width="57" height="30"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerTapEvent:" destination="whP-gf-Uak" eventType="touchUpInside" id="Oq8-Qw-3FA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNv-ek-oPM">
@@ -34,24 +41,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aes-li-iD5">
-                                <rect key="frame" x="155.5" y="420" width="64" height="30"/>
-                                <state key="normal" title="Purchase"/>
+                                <rect key="frame" x="156.5" y="420" width="62" height="30"/>
+                                <state key="normal" title="QR Code"/>
                                 <connections>
-                                    <action selector="purchaseEvent:" destination="whP-gf-Uak" eventType="touchUpInside" id="dQN-bx-HeO"/>
+                                    <action selector="qrCodeEvent:" destination="whP-gf-Uak" eventType="touchUpInside" id="gsu-xa-WbW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuH-A0-FTd">
-                                <rect key="frame" x="150" y="467" width="75" height="30"/>
-                                <state key="normal" title="Add Friend"/>
+                                <rect key="frame" x="167.5" y="467" width="40" height="30"/>
+                                <state key="normal" title="Share"/>
                                 <connections>
-                                    <action selector="addFriendEvent:" destination="whP-gf-Uak" eventType="touchUpInside" id="G9g-dA-hfb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3je-b6-OHk">
-                                <rect key="frame" x="118.5" y="211" width="138" height="30"/>
-                                <state key="normal" title="Request for location"/>
-                                <connections>
-                                    <action selector="requestForLocation:" destination="whP-gf-Uak" eventType="touchUpInside" id="3oL-6i-fb2"/>
+                                    <action selector="shareEvent:" destination="whP-gf-Uak" eventType="touchUpInside" id="nrS-Al-fAo"/>
                                 </connections>
                             </button>
                         </subviews>

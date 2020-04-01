@@ -24,14 +24,14 @@
     [ADAAnalytics sharedInstance].delegate = self;
 }
 
-- (IBAction)requestForLocation:(id)sender
+- (IBAction)onWelcomeTap:(id)sender
 {
     [self.locationManager requestWhenInUseAuthorization];
 }
 
-- (IBAction)buttonTapEvent:(id)sender
+- (IBAction)registerTapEvent:(id)sender
 {
-    [[ADAAnalytics sharedInstance] logEvent:@"Button Tap" parameters:@{
+    [[ADAAnalytics sharedInstance] logEvent:@"Register" parameters:@{
         @"Screen Name": @"MainViewController"
     }];
 }
@@ -45,9 +45,9 @@
     }];
 }
 
-- (IBAction)purchaseEvent:(id)sender
+- (IBAction)qrCodeEvent:(id)sender
 {
-    [[ADAAnalytics sharedInstance] logEvent:@"Purchase" parameters:@{
+    [[ADAAnalytics sharedInstance] logEvent:@"QR Code" parameters:@{
         @"Screen Name": @"ProductDetailViewController",
         @"ProductId": @"A12345",
         @"UserId": @"12345678",
@@ -56,9 +56,9 @@
     }];
 }
 
-- (IBAction)addFriendEvent:(id)sender
+- (IBAction)shareEvent:(id)sender
 {
-    [[ADAAnalytics sharedInstance] logEvent:@"Add Friend" parameters:@{
+    [[ADAAnalytics sharedInstance] logEvent:@"Share" parameters:@{
         @"Screen Name": @"AddFriendViewController",
         @"UserId": @"12345678",
         @"FriendId": @"23423456"

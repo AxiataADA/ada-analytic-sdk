@@ -1,8 +1,9 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/Reachability" "${PODS_CONFIGURATION_BUILD_DIR}/ada-analytic-sdk"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Reachability/Reachability.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ada-analytic-sdk/ada_analytic_sdk.framework/Headers"
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -framework "AFNetworking" -framework "CoreGraphics" -framework "MobileCoreServices" -framework "Reachability" -framework "Security" -framework "SystemConfiguration" -framework "ada_analytic_sdk"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/Reachability" "${PODS_ROOT}/Headers/Public/ada-analytic-sdk"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/Reachability" "${PODS_CONFIGURATION_BUILD_DIR}/ada-analytic-sdk"
+OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_ROOT}/Headers/Public/AFNetworking/AFNetworking.modulemap" -fmodule-map-file="${PODS_ROOT}/Headers/Public/Reachability/Reachability.modulemap" -fmodule-map-file="${PODS_ROOT}/Headers/Public/ada_analytic_sdk/ada-analytic-sdk.modulemap"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"Reachability" -l"ada-analytic-sdk" -framework "CoreGraphics" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_ROOT}/Headers/Public/AFNetworking/AFNetworking.modulemap" -Xcc -fmodule-map-file="${PODS_ROOT}/Headers/Public/Reachability/Reachability.modulemap" -Xcc -fmodule-map-file="${PODS_ROOT}/Headers/Public/ada_analytic_sdk/ada-analytic-sdk.modulemap"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

@@ -1,6 +1,0 @@
-framework module Pods_ada_analytic_sdk_Example {
-  umbrella header "Pods-ada-analytic-sdk_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}

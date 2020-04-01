@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04AD07FEBC9866E576621D1F /* Pods_ada_analytic_sdk_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE46F52ADB6AB790E1001718 /* Pods_ada_analytic_sdk_Example.framework */; };
+		43957F572704D934E94248C4 /* libPods-ada-analytic-sdk_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E083A343236EDCF0B0B70A97 /* libPods-ada-analytic-sdk_Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -23,7 +23,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		D46322EBE50F3D11CD7D0130 /* Pods_ada_analytic_sdk_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137D746F16DE406D925B319D /* Pods_ada_analytic_sdk_Tests.framework */; };
+		AB5AE7BFBA35A126A6238BA7 /* libPods-ada-analytic-sdk_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A21A1E2E18FDAAF774866A80 /* libPods-ada-analytic-sdk_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		137D746F16DE406D925B319D /* Pods_ada_analytic_sdk_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ada_analytic_sdk_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E3726E7095CA1F64097CD8D /* Pods-ada-analytic-sdk_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ada-analytic-sdk_Tests.release.xcconfig"; path = "Target Support Files/Pods-ada-analytic-sdk_Tests/Pods-ada-analytic-sdk_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2DC4BDF6F32B4865C0D2F3E4 /* ada-analytic-sdk.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "ada-analytic-sdk.podspec"; path = "../ada-analytic-sdk.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6003F58A195388D20070C39A /* ada-analytic-sdk_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ada-analytic-sdk_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,9 +63,10 @@
 		9052D7D7785A40523A6FB5CB /* Pods-ada-analytic-sdk_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ada-analytic-sdk_Example.release.xcconfig"; path = "Target Support Files/Pods-ada-analytic-sdk_Example/Pods-ada-analytic-sdk_Example.release.xcconfig"; sourceTree = "<group>"; };
 		99537D136D075BA8303D996B /* Pods-ada-analytic-sdk_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ada-analytic-sdk_Example.debug.xcconfig"; path = "Target Support Files/Pods-ada-analytic-sdk_Example/Pods-ada-analytic-sdk_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9B01D651A29F8882B599CB3B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A21A1E2E18FDAAF774866A80 /* libPods-ada-analytic-sdk_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ada-analytic-sdk_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C7D8F197D4A48BAD2C9597 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E083A343236EDCF0B0B70A97 /* libPods-ada-analytic-sdk_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ada-analytic-sdk_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22DFFA5D86E022CC0ECB262 /* Pods-ada-analytic-sdk_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ada-analytic-sdk_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ada-analytic-sdk_Tests/Pods-ada-analytic-sdk_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		EE46F52ADB6AB790E1001718 /* Pods_ada_analytic_sdk_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ada_analytic_sdk_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				04AD07FEBC9866E576621D1F /* Pods_ada_analytic_sdk_Example.framework in Frameworks */,
+				AB5AE7BFBA35A126A6238BA7 /* libPods-ada-analytic-sdk_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				D46322EBE50F3D11CD7D0130 /* Pods_ada_analytic_sdk_Tests.framework in Frameworks */,
+				43957F572704D934E94248C4 /* libPods-ada-analytic-sdk_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,8 +134,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				EE46F52ADB6AB790E1001718 /* Pods_ada_analytic_sdk_Example.framework */,
-				137D746F16DE406D925B319D /* Pods_ada_analytic_sdk_Tests.framework */,
+				A21A1E2E18FDAAF774866A80 /* libPods-ada-analytic-sdk_Example.a */,
+				E083A343236EDCF0B0B70A97 /* libPods-ada-analytic-sdk_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,7 +207,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				E2D9F8D516B5EEB5D30C7C3F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,28 +339,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E2D9F8D516B5EEB5D30C7C3F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ada-analytic-sdk_Example/Pods-ada-analytic-sdk_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/ada-analytic-sdk/ada_analytic_sdk.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ada_analytic_sdk.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ada-analytic-sdk_Example/Pods-ada-analytic-sdk_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

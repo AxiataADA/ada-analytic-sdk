@@ -1,4 +1,4 @@
-framework module ada_analytic_sdk {
+module ada_analytic_sdk {
   umbrella header "ada-analytic-sdk-umbrella.h"
 
   export *

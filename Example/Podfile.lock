@@ -1,5 +1,5 @@
 PODS:
-  - ada-analytic-sdk (1.0.2):
+  - ada-analytic-sdk (1.0.3):
     - AFNetworking (~> 3.2.1)
     - Reachability
   - AFNetworking (3.2.1):
@@ -32,10 +32,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ada-analytic-sdk: a2b03faf526416eb502bbf60a55cbcc431a1bdb3
+  ada-analytic-sdk: 16efd2c898a22b72a38ba9468b358280a4f74a82
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
 
-PODFILE CHECKSUM: fd6a42882d4e54149e908764fcc6e4f79ebae182
+PODFILE CHECKSUM: 6fe9373ceef80e6747dacad900eae09c6f99b292
 
 COCOAPODS: 1.8.4
