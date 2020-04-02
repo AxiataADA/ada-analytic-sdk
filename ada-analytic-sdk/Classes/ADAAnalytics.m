@@ -12,8 +12,8 @@
 
 #import "ADAAnalytics.h"
 #import "URLRequestSigner.h"
-#import "AFNetworking.h"
-#import "Reachability.h"
+#import <AFNetworking/AFNetworking.h>
+#import <Reachability/Reachability.h>
 #import "StringHash.h"
 #import <sys/utsname.h>
 #include <ifaddrs.h>

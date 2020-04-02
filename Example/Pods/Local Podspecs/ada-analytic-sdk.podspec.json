@@ -1,9 +1,9 @@
 {
   "name": "ada-analytic-sdk",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "summary": "ada-analytic-sdk.",
-  "description": "ada-analytic-sdk.",
-  "homepage": "https://github.com/chavalit.v@ada-asia.com/ada-analytic-sdk",
+  "description": "ADA Mobile Analytic SDK for iOS",
+  "homepage": "https://github.com/AxiataADA/ada-analytic-sdk-specs.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "chavalit.v@ada-asia.com": "chavalit.v@ada-asia.com"
   },
   "source": {
-    "git": "https://github.com/chavalit.v@ada-asia.com/ada-analytic-sdk.git",
-    "tag": "1.0.4"
+    "git": "https://github.com/AxiataADA/ada-analytic-sdk.git",
+    "tag": "1.0.8"
   },
   "platforms": {
     "ios": "10.0"
@@ -21,7 +21,7 @@
   "source_files": "ada-analytic-sdk/Classes/**/*",
   "dependencies": {
     "AFNetworking": [
-      "~> 3.2.1"
+      "~> 4.0.0"
     ],
     "Reachability": [
 
