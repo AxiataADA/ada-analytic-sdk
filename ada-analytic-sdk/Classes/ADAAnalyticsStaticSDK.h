@@ -19,4 +19,5 @@ FOUNDATION_EXPORT const unsigned char ADAAnalyticsStaticSDKVersionString[];
 #import <AWSCategory.h>
 #import <URLRequestSigner.h>
 #import <StringHash.h>
+#import <DeviceUID.h>
 

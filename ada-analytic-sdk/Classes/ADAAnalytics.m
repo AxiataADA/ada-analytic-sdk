@@ -12,6 +12,7 @@
 
 #import "ADAAnalytics.h"
 #import "URLRequestSigner.h"
+#import "DeviceUID.h"
 #import <AFNetworking/AFNetworking.h>
 #import <Reachability/Reachability.h>
 #import "StringHash.h"
@@ -51,6 +52,7 @@
 CLLocationManager *locationManager;
 CBCentralManager *centralManager;
 NSString* maid;
+NSString* uniqueId;
 NSDate* installedDate;
 CLLocation* lastLocation;
 NSString* appName;
@@ -86,6 +88,7 @@ NSTimer *timer;
 - (void)configure
 {
     maid = [self identifierForAdvertising];
+    uniqueId = [DeviceUID uid];
     installedDate = [self appInstalledDate];
     iOSVersion = [[UIDevice currentDevice] systemVersion];
     phoneModel = [self deviceName];
@@ -360,6 +363,7 @@ NSTimer *timer;
     [parameters setValue:appName forKey:@"app_name"];
     [parameters setValue:[[NSBundle mainBundle] bundleIdentifier] forKey:@"app_id"];
     [parameters setValue:maid forKey:@"maid"];
+    [parameters setValue:uniqueId forKey:@"device_unique_id"];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
     NSString *installedDateString = [formatter stringFromDate:installedDate];
