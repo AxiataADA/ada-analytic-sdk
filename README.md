@@ -27,8 +27,8 @@ $ pod init
 ```
 2. From previous step, there should be a file name Podspec generated in your project folder open
  that file with any text editor and make these changes:
--- Uncomment the platform :ios line by deleting the ‘#’ sign at the beginning of the line and change the version number to 10.0
--- Under the Pods for `NAME_OF_YOUR_PROJECT` add
+- Uncomment the platform :ios line by deleting the ‘#’ sign at the beginning of the line and change the version number to 10.0
+- Under the Pods for `NAME_OF_YOUR_PROJECT` add
 *pod 'ada-analytic-sdk', :git=> 'https://github.com/AxiataADA/ada-analytic-sdk.git'*
 
 ```ruby
