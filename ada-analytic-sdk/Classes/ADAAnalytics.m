@@ -131,20 +131,20 @@ NSTimer *timer;
 
 - (void)prepareBluetoothManager
 {
-    if (@available(iOS 13.1, *)) {
-        if (![[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSBluetoothAlwaysUsageDescription"]) {
-            return;
-        }
-    } else {
-        if (![[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSBluetoothPeripheralUsageDescription"]) {
-            return;
-        }
-    }
-    
-    if (centralManager == nil) {
-        centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)];
-    }
-    [self scanForBluetoothDevices];
+//    if (@available(iOS 13.1, *)) {
+//        if (![[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSBluetoothAlwaysUsageDescription"]) {
+//            return;
+//        }
+//    } else {
+//        if (![[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSBluetoothPeripheralUsageDescription"]) {
+//            return;
+//        }
+//    }
+//
+//    if (centralManager == nil) {
+//        centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)];
+//    }
+//    [self scanForBluetoothDevices];
 }
 
 - (NSString *)identifierForAdvertising
@@ -425,61 +425,61 @@ NSTimer *timer;
 
 - (void)scanForBluetoothDevices
 {
-    if (centralManager && [self hasBluetoothPermission] && bluetoothOn) {
-        [centralManager scanForPeripheralsWithServices:nil options:nil];
-        
-        double delayInSeconds = 4.0;
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-        dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            [centralManager stopScan];
-        });
-    }
+//    if (centralManager && [self hasBluetoothPermission] && bluetoothOn) {
+//        [centralManager scanForPeripheralsWithServices:nil options:nil];
+//
+//        double delayInSeconds = 4.0;
+//        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+//        dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//            [centralManager stopScan];
+//        });
+//    }
 }
 
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
-    if ([central state] == CBManagerStatePoweredOn) {
-        bluetoothOn = YES;
-        [self scanForBluetoothDevices];
-    } else {
-        if (centralManager && [self hasBluetoothPermission] && bluetoothOn) {
-            [centralManager stopScan];
-        }
-        bluetoothOn = NO;
-        [recentPeripherals removeAllObjects];
-        [recentPeripheralIds removeAllObjects];
-    }
+//    if ([central state] == CBManagerStatePoweredOn) {
+//        bluetoothOn = YES;
+//        [self scanForBluetoothDevices];
+//    } else {
+//        if (centralManager && [self hasBluetoothPermission] && bluetoothOn) {
+//            [centralManager stopScan];
+//        }
+//        bluetoothOn = NO;
+//        [recentPeripherals removeAllObjects];
+//        [recentPeripheralIds removeAllObjects];
+//    }
 }
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI {
     
-    if ([RSSI integerValue] > -15) {
-        return;
-    }
-
-    if ([RSSI integerValue] < -90) {
-        return;
-    }
-    
-    NSString *id = [[peripheral identifier] UUIDString];
-    if ([recentPeripheralIds containsObject:id]) {
-        return;
-    } else {
-        [recentPeripheralIds addObject:id];
-    }
-
-    NSMutableDictionary *peripheralData = [[NSMutableDictionary alloc] init];
-
-    if (id != nil) {
-        [peripheralData setObject:id forKey:@"id"];
-        [peripheralData setObject:@"UNKNOWN" forKey:@"type"];
-        [peripheralData setObject:RSSI forKey:@"rssi"];
-        
-        if ([peripheral name] != nil) {
-            [peripheralData setObject:[peripheral name] forKey:@"name"];
-        }
-    }
-
-    [recentPeripherals addObject:peripheralData];
+//    if ([RSSI integerValue] > -15) {
+//        return;
+//    }
+//
+//    if ([RSSI integerValue] < -90) {
+//        return;
+//    }
+//
+//    NSString *id = [[peripheral identifier] UUIDString];
+//    if ([recentPeripheralIds containsObject:id]) {
+//        return;
+//    } else {
+//        [recentPeripheralIds addObject:id];
+//    }
+//
+//    NSMutableDictionary *peripheralData = [[NSMutableDictionary alloc] init];
+//
+//    if (id != nil) {
+//        [peripheralData setObject:id forKey:@"id"];
+//        [peripheralData setObject:@"UNKNOWN" forKey:@"type"];
+//        [peripheralData setObject:RSSI forKey:@"rssi"];
+//
+//        if ([peripheral name] != nil) {
+//            [peripheralData setObject:[peripheral name] forKey:@"name"];
+//        }
+//    }
+//
+//    [recentPeripherals addObject:peripheralData];
 }
 
 #pragma Public Methods Implementation
