@@ -402,9 +402,9 @@ NSTimer *timer;
         [parameters setValue:locationDict forKey:@"geo"];
     }
     
-    if ([recentPeripherals count] > 0) {
-        [parameters setValue:recentPeripherals forKey:@"bluetooth_devices"];
-    }
+//    if ([recentPeripherals count] > 0) {
+//        [parameters setValue:recentPeripherals forKey:@"bluetooth_devices"];
+//    }
     
     return parameters;
 }
