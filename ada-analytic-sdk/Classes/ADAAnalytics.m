@@ -379,7 +379,7 @@ NSTimer *timer;
     [deviceDict setValue:maid forKey:@"ifa"];
     [deviceDict setValue:[self getIPAddress: YES] forKey:@"ip"];
     [deviceDict setValue:uniqueId forKey:@"id"];
-    [deviceDict setValue:@"1.1.0" forKey:@"sdkv"];
+    [deviceDict setValue:@"1.1.4" forKey:@"sdkv"];
     [parameters setValue:deviceDict forKey:@"device"];
     
     NSMutableDictionary *appDict = [[NSMutableDictionary alloc] init];
