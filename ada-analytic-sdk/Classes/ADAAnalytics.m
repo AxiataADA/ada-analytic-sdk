@@ -363,6 +363,7 @@ NSTimer *timer;
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
+    [formatter setCalendar: [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian]];
     NSString *installedDateString = [formatter stringFromDate:installedDate];
     NSString *timestamp = [formatter stringFromDate:[NSDate date]];
     [parameters setValue:installedDateString forKey:@"installed_date"];
